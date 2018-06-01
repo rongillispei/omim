@@ -376,6 +376,9 @@ Framework::Framework(FrameworkParams const & params)
   })
   , m_lastReportedCountry(kInvalidCountryId)
 {
+  //TEMPORARY! Remove me after testing.
+  LOG(LINFO, ("MAC:", GetPlatform().MacAddress(false)));
+
   m_startBackgroundTime = my::Timer::LocalTime();
 
   // Restore map style before classificator loading
